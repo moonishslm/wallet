@@ -52,7 +52,7 @@ class WalletControllerTest {
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.id").isNotEmpty())
+                .andExpect(jsonPath("$.walletId").isNotEmpty())
                 .andExpect(jsonPath("$.userId").value(userId.toString()))
                 .andExpect(jsonPath("$.balance").value("1000.00"));
     }

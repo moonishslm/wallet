@@ -63,9 +63,9 @@ class AuthenticationControllerTest {
         registerDto.setLastName("salimi");
         registerDto.setEmail("salimi@example.com");
         registerDto.setPhoneNumber("09123456789");
-        registerDto.setGender(Gender.MALE);
+        registerDto.setGender(Gender.FEMALE);
         registerDto.setMilitaryStatus(true);
-        registerDto.setDateOfBirth(LocalDate.of(1990, 11, 27));
+        registerDto.setDateOfBirth(LocalDate.of(1998, 10, 27));
         registerDto.setDeposit(new BigDecimal("10000"));
         registerDto.setDepositAccountNumber(new BigInteger("1000000000"));
 
@@ -85,9 +85,9 @@ class AuthenticationControllerTest {
         registerDto.setIdNumber("1234567890");
         registerDto.setUsername("testuser");
         registerDto.setPassword("password123");
-        registerDto.setFirstName("Jane");
-        registerDto.setLastName("Doe");
-        registerDto.setEmail("jane.doe@example.com");
+        registerDto.setFirstName("mahshad");
+        registerDto.setLastName("nazari");
+        registerDto.setEmail("salimi.msh@example.com");
         registerDto.setPhoneNumber("09187654321");
         registerDto.setGender(Gender.FEMALE);
         registerDto.setMilitaryStatus(false);

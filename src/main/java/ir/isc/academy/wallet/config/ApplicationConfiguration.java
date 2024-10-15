@@ -1,6 +1,5 @@
 package ir.isc.academy.wallet.config;
 
-
 import ir.isc.academy.wallet.repository.UserRepo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
