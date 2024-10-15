@@ -43,7 +43,7 @@ class WalletControllerTest {
         WalletResponseDTO walletResponseDTO = new WalletResponseDTO();
         walletResponseDTO.setWalletId(UUID.randomUUID());
         walletResponseDTO.setUserId(userId);
-        walletResponseDTO.setBalance(new BigDecimal("1000.00"));
+        walletResponseDTO.setBalance(new BigDecimal("1000.0"));
 
         when(walletService.readWallet(userId)).thenReturn(walletResponseDTO);
 
@@ -54,7 +54,7 @@ class WalletControllerTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.walletId").isNotEmpty())
                 .andExpect(jsonPath("$.userId").value(userId.toString()))
-                .andExpect(jsonPath("$.balance").value("1000.00"));
+                .andExpect(jsonPath("$.balance").value("1000.0"));
     }
 
     @Test
