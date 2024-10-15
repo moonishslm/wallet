@@ -4,12 +4,9 @@ package ir.isc.academy.wallet.model;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.GenerationTime;
-
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.sql.*;
-import java.time.LocalDate;
 import java.util.*;
 
 @Entity

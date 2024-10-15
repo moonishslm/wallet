@@ -3,7 +3,6 @@ package ir.isc.academy.wallet.model;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
-
 import java.math.*;
 import java.sql.*;
 import java.util.*;
