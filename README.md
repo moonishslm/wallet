@@ -110,10 +110,9 @@ Password: root
 ## Database Schema Setup
 
 This project requires specific tables in the PostgreSQL database.
-You can find the Data Definition Language (DDL) statements to create these tables in the `DDL Create Tables.txt` file in the repository.
-Then Using pgAdmin to Create Tables
-
-
+You can find the Data Definition Language (DDL) statements to create these tables in the `DDL_postgres_create_table.sql` file in the repository.
+Then Using pgAdmin to Create Tables. 
+do not forget to create the sequences that generating IBAN and AccountNumber. you can have them in `iban_seq.sql` and `account_number.sql`
 
 . In the pgAdmin interface:
 - Expand the Servers dropdown
