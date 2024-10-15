@@ -13,6 +13,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.UUID;
 
 import static org.mockito.Mockito.when;
@@ -37,41 +38,36 @@ class WalletControllerTest {
 
     @Test
     void readWallet_shouldReturnWalletDetails() throws Exception {
-        UUID userId = UUID.randomUUID();
+        String username = "testuser";
         WalletResponseDTO walletResponseDTO = new WalletResponseDTO();
         walletResponseDTO.setWalletId(UUID.randomUUID());
-        walletResponseDTO.setUserId(userId);
+        walletResponseDTO.setAccountNumber(new BigInteger("12345678901234"));
         walletResponseDTO.setBalance(new BigDecimal("1000.0"));
+        walletResponseDTO.setIban("IR-0000727379945");
 
-        when(walletService.readWallet(userId)).thenReturn(walletResponseDTO);
+        when(walletService.readWallet(username)).thenReturn(walletResponseDTO);
 
         mockMvc.perform(get("/api/v1/wallet/read")
-                        .param("userId", userId.toString())
+                        .param("username", username)
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.walletId").isNotEmpty())
-                .andExpect(jsonPath("$.userId").value(userId.toString()))
-                .andExpect(jsonPath("$.balance").value("1000.0"));
+                .andExpect(jsonPath("$.accountNumber").value("12345678901234"))
+                .andExpect(jsonPath("$.balance").value("1000.0"))
+                .andExpect(jsonPath("$.iban").value("IR-0000727379945"));
     }
 
     @Test
     void readWallet_shouldReturnNotFound_whenWalletDoesNotExist() throws Exception {
-        UUID userId = UUID.randomUUID();
+        String username = "nonexistentuser";
 
-        when(walletService.readWallet(userId)).thenThrow(new RuntimeException("Wallet not found"));
+        when(walletService.readWallet(username)).thenThrow(new RuntimeException("Wallet not found"));
 
         mockMvc.perform(get("/api/v1/wallet/read")
-                        .param("userId", userId.toString())
+                        .param("username", username)
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isNotFound());
     }
 
-    @Test
-    void readWallet_shouldReturnBadRequest_whenUserIdIsInvalid() throws Exception {
-        mockMvc.perform(get("/api/v1/wallet/read")
-                        .param("userId", "invalid-uuid")
-                        .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isBadRequest());
-    }
 }
