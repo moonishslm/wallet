@@ -30,8 +30,6 @@ class WalletControllerTest {
     @InjectMocks
     private WalletController walletController;
 
-//    private ObjectMapper objectMapper = new ObjectMapper();
-
     @BeforeEach
     void setUp() {
         this.mockMvc = MockMvcBuilders.standaloneSetup(walletController).build();
