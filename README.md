@@ -28,14 +28,12 @@ This project is a Digital Wallet API that allows users to manage their digital f
 ### Prerequisites
 
 - JDK 17 or later
-- Maven 3.6+
-- PostgreSQL 12+
+- Maven 3.6
+- PostgreSQL 12
 
 ### Installation
 
 1. Clone the repository:
-
-git clone https://github.com/yourusername/digital-wallet-api.git
 
 2. Navigate to the project directory:
 
