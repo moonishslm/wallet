@@ -1,4 +1,4 @@
-# Digital Wallet API
+# Digital Wallet
 
 ## Overview
 
