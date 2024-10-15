@@ -33,6 +33,8 @@ public class UserService {
     final private UserRepo userRepo;
     final private WalletRepo walletRepo;
     final private TransactionRepo transactionRepo;
+    private final JwtService jwtService;
+
 
     @PersistenceContext
     private EntityManager entityManager;
@@ -90,7 +92,6 @@ public class UserService {
         User existingUser = userRepo.findByUsername(username)
                 .orElseThrow(() -> new RuntimeException("UserName not found"));
 
-        existingUser.setPassword(userUpdateRequestDto.getPassword());
         existingUser.setFirstName(userUpdateRequestDto.getFirstName());
         existingUser.setLastName(userUpdateRequestDto.getLastName());
         existingUser.setEmail(userUpdateRequestDto.getEmail());

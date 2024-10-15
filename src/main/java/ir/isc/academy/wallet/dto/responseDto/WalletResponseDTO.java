@@ -14,7 +14,7 @@ import java.util.UUID;
 @Getter
 public class WalletResponseDTO {
     private UUID walletId;
-    private UUID userId;
+    private String username;
     private BigInteger accountNumber;
     private BigDecimal balance;
     private String iban;

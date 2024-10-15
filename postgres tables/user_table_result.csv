@@ -1,0 +1,3 @@
+"id","national_idnumber","username","password","firstname","lastname","email","gender","military_status","date_of_birth","created_date","phone_number","daily_transaction_total","last_transaction_date"
+"9fad41ac-2c17-4d5d-98f7-691f7a568e77","0028180031","farow","$2a$10$685mB5m/h/2xOajYEWptU.264ff3b1GFFoBIRSlI6vbcFk8zzPHrW","farbod","nazari","nazari.farbod@example.com","MALE",False,"1998-03-13","2024-10-15 22:02:50.592471","09124895788","0.00",NULL
+"34a7f2be-40fb-4119-be3f-b913091d7792","0028199133","moonish","$2a$10$ECDjxXbpDCe4YwRjWb5izugZmP2ge0aq9Vpc.LI5jveBPXFbQD4W2","mahshad","salimi","msh.salimi@example.com","FEMALE",False,"1998-05-15","2024-10-15 22:02:46.690442","09034460220","223000.00","2024-10-15"

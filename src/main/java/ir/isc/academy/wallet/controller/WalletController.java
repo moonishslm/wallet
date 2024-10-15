@@ -20,9 +20,9 @@ public class WalletController {
     final WalletService walletService;
 
     @GetMapping("/read")
-    public ResponseEntity<WalletResponseDTO> readWallet(@RequestParam UUID userId) {
+    public ResponseEntity<WalletResponseDTO> readWallet(@RequestParam String username) {
         try {
-            WalletResponseDTO walletResponseDTO = walletService.readWallet(userId);
+            WalletResponseDTO walletResponseDTO = walletService.readWallet(username);
             return ResponseEntity.ok(walletResponseDTO);
         } catch (RuntimeException e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
