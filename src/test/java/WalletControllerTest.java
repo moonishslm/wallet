@@ -30,7 +30,7 @@ class WalletControllerTest {
     @InjectMocks
     private WalletController walletController;
 
-    private ObjectMapper objectMapper = new ObjectMapper();
+//    private ObjectMapper objectMapper = new ObjectMapper();
 
     @BeforeEach
     void setUp() {
