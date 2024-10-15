@@ -31,27 +31,6 @@ This project is a Digital Wallet API that allows users to manage their digital f
 - Maven 3.6
 - PostgreSQL 12
 
-### Installation
-
-1. Clone the repository:
-
-2. Navigate to the project directory:
-
-cd digital-wallet-api
-
-3. Configure the database connection in `src/main/resources/application.properties`
-
-4. Build the project:
-
-mvn clean install
-
-5. Run the application:
-
-mvn spring-boot:run
-
-
-The API will be available at `http://localhost:8080`
-
 ## API Endpoints
 
 - POST `/api/v1/auth/register` - Register a new user
