@@ -23,6 +23,27 @@ This project is a Digital Wallet API that allows users to manage their digital f
 - Maven
 - JUnit 5 for testing
 
+## Database and API Documentation
+
+### PostgreSQL Tables
+
+In the `postgres_tables` folder, you can find CSV files representing the output of our PostgreSQL tables.
+
+### Postman Collection and Examples
+
+In the `postman_details` folder, you'll find:
+
+1. A JSON file containing the Postman collection for this API. This collection includes all the requests needed to interact with the Digital Wallet.
+2. Images of Postman requests and their corresponding responses. These images serve as visual documentation of the API's behavior and can be particularly helpful for understanding the expected input and output of each endpoint.
+ Note:  do not forget to enter the token validation of each user before using the requests. 
+
+To use the Postman collection:
+
+1. Open Postman
+2. Click on "Import" in the top left corner
+3. Select the JSON file from the `postman_details` folder
+4. The collection will be imported, and you can now send requests to the API
+
 ## Getting Started
 
 ### Prerequisites
@@ -91,6 +112,8 @@ Password: root
 This project requires specific tables in the PostgreSQL database.
 You can find the Data Definition Language (DDL) statements to create these tables in the `DDL Create Tables.txt` file in the repository.
 Then Using pgAdmin to Create Tables
+
+
 
 . In the pgAdmin interface:
 - Expand the Servers dropdown
